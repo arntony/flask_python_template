@@ -6,13 +6,13 @@ RUN yum install -y gcc openssl-devel bzip2-devel libffi-devel wget make
 
 # Download and install Python 3.7
 RUN cd /usr/src \
-    wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz \
-    tar xzf Python-3.7.4.tgz \
-    cd Python-3.7.4 \
+RUN wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz \
+RUN tar xzf Python-3.7.4.tgz \
+RUN cd Python-3.7.4 \
     ./configure --enable-optimizations \
-    make altinstall \
+RUN make altinstall \
     rm /usr/src/Python-3.7.4.tgz \
-    cd ..
+RUN cd ..
 
 # install git and clone git repo
 RUN yum install -y git \
