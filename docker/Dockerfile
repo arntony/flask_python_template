@@ -4,7 +4,7 @@ FROM centos
 RUN yum install -y gcc openssl-devel bzip2-devel libffi-devel
 
 # Install wget, tar
-RUN yum install -y wget g++ cmake make automake autoconf
+RUN yum install -y wget cmake make automake autoconf
 
 # Download Python 3.7
 RUN cd /usr/src
