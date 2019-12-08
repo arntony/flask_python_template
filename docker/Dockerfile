@@ -24,4 +24,4 @@ RUN PYTHONPATH="${PYTHONPATH}:/usr/src/flask_python_template/src" && \
 RUN pip3.7 install -r flask_python_template/src/requirements.txt
 RUN pwd
 EXPOSE 8080
-ENTRYPOINT ["python3.7", "/usr/src/flask_python_template/src/run_application.py"]
+ENTRYPOINT ["python3.7", "flask_python_template/src/run_application.py"]
