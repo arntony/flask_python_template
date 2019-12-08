@@ -14,7 +14,7 @@ RUN tar xzf Python-3.7.4.tgz
 
 # Install Python 3.7
 RUN cd Python-3.7.4
-RUN ./configure --enable-optimizations
+# RUN ./configure --enable-optimizations
 RUN make altinstall
 
 # remove downloaded source archive file from system
@@ -22,7 +22,7 @@ RUN rm /usr/src/Python-3.7.4.tgz
 RUN cd ..
 
 # install git
-RUN yum -y install git
+RUN yum install -y git
 
 # clone git repo
 RUN git clone https://github.com/arntony/flask_python_template.git
