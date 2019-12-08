@@ -6,6 +6,8 @@ RUN yum install -y gcc openssl-devel bzip2-devel libffi-devel
 # Install wget, tar
 RUN yum install -y wget
 RUN yum install -y make
+RUN yum install -y automake
+RUN yum install -y autoconf
 
 # Download Python 3.7
 RUN cd /usr/src
@@ -14,7 +16,8 @@ RUN tar xzf Python-3.7.4.tgz
 
 # Install Python 3.7
 RUN cd Python-3.7.4
-# RUN ./configure --enable-optimizations
+RUN autoreconf -i
+RUN ./configure --enable-optimizations
 RUN make altinstall
 
 # remove downloaded source archive file from system
