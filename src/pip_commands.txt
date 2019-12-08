@@ -1,0 +1,2 @@
+pip3.7 freeze > src/requirements.txt
+pip3.7 download -d src/packages/centos -r src/requirements.txt --platform linux_x86_64 --python-version 37 --implementation cp --only-binary=:all: --abi cp37m

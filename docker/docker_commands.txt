@@ -1,0 +1,40 @@
+# download a new image from docker hub
+-------------------------------------------------------------
+$ docker pull centos:latest
+
+# run the image interactively with a terminal
+-------------------------------------------------------------
+$ docker run -i -t centos
+
+# run the docker image interactively,
+# install a new app (ex. man),
+# save the new image with name 'man-centos'
+-------------------------------------------------------------
+$ docker run -i -t centos
+[root@3aeae2391e5f /]# yum install man
+[root@3aeae2391e5f /]# exit
+$ docker commit 3aeae2391e5f man-centos
+
+# list all docker images
+-------------------------------------------------------------
+$ docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+man-centos          latest              2b8511265d95        11 seconds ago      266MB
+centos              latest              0f3e07c0138f        2 months ago        220MB
+hello-world         latest              fce289e99eb9        11 months ago       1.84kB
+
+# list all active docker containers
+-------------------------------------------------------------
+$ docker container ls
+
+# remove all stopped containers
+-------------------------------------------------------------
+$ docker container prune
+
+# remove one docker container
+-------------------------------------------------------------
+$ docker container rm <container_id>
+
+# remove a docker image
+-------------------------------------------------------------
+$ docker rmi centos

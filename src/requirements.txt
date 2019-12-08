@@ -1,0 +1,17 @@
+# -----------  --platform linux_x86_64 --abi none ------------
+cheroot==8.2.1
+CherryPy==18.5.0
+jaraco.classes==2.0
+jaraco.collections==2.1
+jaraco.functools==2.0
+jaraco.text==3.2.0
+more-itertools==8.0.2
+zc.lockfile==2.0
+# -----------  --platform manylinux1_x86_64 --abi cp37m ------------
+numpy==1.17.4
+pandas==0.25.3
+portend==2.6
+python-dateutil==2.8.1
+pytz==2019.3
+six==1.13.0
+tempora==1.14.1

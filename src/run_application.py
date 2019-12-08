@@ -31,7 +31,7 @@ class RunApplication(object):
 
 
 if __name__ == '__main__':
-    config = {'server.socket_host': 'localhost',
-              'server.socket_port': 4200}
+    config = {'server.socket_host': '0.0.0.0',
+              'server.socket_port': 8080}
     cherrypy.config.update(config)
     cherrypy.quickstart(RunApplication())
