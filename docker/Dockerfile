@@ -9,8 +9,8 @@ RUN cd /usr/src
 RUN wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz
 RUN tar xzf Python-3.7.4.tgz
 RUN cd Python-3.7.4 && ./configure --enable-optimizations && make altinstall
-RUN rm /usr/src/Python-3.7.4.tgz
 RUN cd ..
+RUN rm Python-3.7.4.tgz
 
 # install git and clone git repo
 RUN yum install -y git \
