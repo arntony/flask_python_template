@@ -13,12 +13,11 @@ RUN cd ..
 RUN rm Python-3.7.4.tgz
 
 # install git and clone git repo
-RUN yum install -y git \
-    git clone https://github.com/arntony/flask_python_template.git
+RUN yum install -y git && git clone https://github.com/arntony/flask_python_template.git
 
 # set PYTHONPATH
-RUN PYTHONPATH="${PYTHONPATH}:/usr/src/flask_python_template/src" \
-    export PYTHONPATH \
+RUN PYTHONPATH="${PYTHONPATH}:/usr/src/flask_python_template/src" && \
+    export PYTHONPATH && \
     source ~/.bashrc
 
 # install requirements
