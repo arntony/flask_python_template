@@ -38,3 +38,11 @@ $ docker container rm <container_id>
 # remove a docker image
 -------------------------------------------------------------
 $ docker rmi centos
+
+# build a docker image from Dockerfile
+-------------------------------------------------------------
+$ docker build -t python-ws .
+
+# run the new docker image
+-------------------------------------------------------------
+$ docker run -p 8080:8080 python-ws
