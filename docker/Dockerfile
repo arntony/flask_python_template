@@ -2,7 +2,7 @@ FROM centos
 
 # Python installation required the GCC compiler on your system
 RUN yum install -y gcc openssl-devel bzip2-devel libffi-devel wget make git && \
-    RUN cd /usr/src  && \
+    cd /usr/src  && \
     wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz && \
     tar xzf Python-3.7.4.tgz && cd Python-3.7.4 && ./configure --enable-optimizations && make altinstall && \
     cd .. && rm Python-3.7.4.tgz && \
